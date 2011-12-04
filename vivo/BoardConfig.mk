@@ -20,3 +20,6 @@ TARGET_PREBUILT_KERNEL := device/raidzero/vivo/kernel
 #BOARD_HAS_NO_SELECT_BUTTON := true
 # Use this flag if the board has a ext4 partition larger than 2gb
 #BOARD_HAS_LARGE_FILESYSTEM := true
+
+#HTC OVERLAY
+include device/raidzero/htc-overlay/BoardConfig.mk
