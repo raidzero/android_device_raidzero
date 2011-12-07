@@ -5,7 +5,11 @@ USE_CAMERA_STUB := true
 
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := unknown
-TARGET_CPU_ABI := armeabi
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_ARCH_VARIANT := armv7-a
+TARGET_ARCH_VARIANT_CPU := cortex-a9
+TARGET_ARCH_VARIANT_FPU := vfpv3-d16
 TARGET_BOOTLOADER_BOARD_NAME := targa
 
 BOARD_KERNEL_CMDLINE := console=/dev/null rw mem=1024M@0x80000000 vram=20M omapgpu.vram=0:4M,1:16M,2:16MT init=/init ip=off brdrev=P2B omap3_die_id androidboot.bootloader=0x0000 mmcparts=mmcblk1:p7(pds),p15(boot),p16(recovery),p17(cdrom),p18(misc),p19(cid),p20(kpanic),p21(system),p22(cache),p23(preinstall),p24(webtop),p25(userdata),p26(emstorage)
