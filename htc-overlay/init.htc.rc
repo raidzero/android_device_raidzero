@@ -8,6 +8,8 @@ on init
     export EXTERNAL_STORAGE /sdcard
 
     symlink /system/etc /etc
+    symlink /sbin/busybox /sbin/sh
+    symlink /sbin/sh /system/bin/sh
 
     mkdir /boot
     mkdir /sdcard
@@ -31,24 +33,28 @@ service ueventd /sbin/ueventd
     critical
 
 service choice_fn /sbin/choice_fn
-    oneshot
+oneshot
 
 service recovery /sbin/recovery
+disabled
 
 service power_test /sbin/power_test
-    disabled
-    oneshot
+disabled
+oneshot
 
 service offmode_charging /sbin/offmode_charging
-    oneshot
-    
+disabled
+oneshot
+
 service detect_key /sbin/detect_key
-    oneshot
+disabled
+oneshot
 
 service htcbatt /sbin/htcbatt
-    oneshot
+oneshot
 
 service adbd /sbin/adbd recovery
+    disabled
 
 on property:persist.service.adb.enable=1
     start adbd
