@@ -1,6 +1,6 @@
 # mount point	fstype		device
 
-/sdcard		vfat		/dev/block/platform/s3c-sdhci.0/by-name/media
+/sdcard		vfat		/dev/block/platform/s3c-sdhci.0/by-name/media	NULL	ext4
 /system		ext4		/dev/block/platform/s3c-sdhci.0/by-name/system
 /cache		yaffs2		cache
 /data		ext4		/dev/block/platform/s3c-sdhci.0/by-name/userdata
