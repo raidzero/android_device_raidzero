@@ -17,6 +17,10 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 TARGET_PREBUILT_KERNEL := device/raidzero/maguro/kernel
 
-#BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_HAS_NO_SELECT_BUTTON := true
 # Use this flag if the board has a ext4 partition larger than 2gb
-#BOARD_HAS_LARGE_FILESYSTEM := true
+BOARD_HAS_LARGE_FILESYSTEM := true
+#BOARD_HAS_INVERTED_VOLUME := true
+#BOARD_HAS_JANKY_BACKBUFFER := true
+
+BOARD_CUSTOM_GRAPHICS           := ../../../device/raidzero/toro/recovery/graphics.c
